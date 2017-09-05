@@ -1099,7 +1099,7 @@ tex_escape_string(const gchar *src, DiaContext *ctx)
 
     p = (char *) src;
     while (*p != '\0') {
-	switch (*p) {
+        switch (*p) { /*
 	case '%': g_string_append(dest, "\\%"); break;
 	case '#': g_string_append(dest, "\\#"); break;
 	case '$': g_string_append(dest, "\\$"); break;
@@ -1111,7 +1111,7 @@ tex_escape_string(const gchar *src, DiaContext *ctx)
 	case '{': g_string_append(dest, "\\{"); break;
 	case '}': g_string_append(dest, "\\}"); break;
 	case '[': g_string_append(dest, "\\ensuremath{[}"); break;
-	case ']': g_string_append(dest, "\\ensuremath{]}"); break;
+	case ']': g_string_append(dest, "\\ensuremath{]}"); break; */
 	default: 
             /* if we really have utf8 append the whole 'glyph' */
             g_string_append_len(dest, p, g_utf8_skip[(unsigned char)*p]);
